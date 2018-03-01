@@ -6,7 +6,14 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+Router.map(function () {
+  this.route('about');
+  this.route('contact');
+  this.route('skitours', function () {
+    this.route('show', {
+      path: '/:skitour_id'
+    });
+  });
 });
 
 export default Router;

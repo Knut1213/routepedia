@@ -1,0 +1,8 @@
+{{#list-filter filter=(action 'filterByStart') as |filteredResults|}}
+  <ul class="results">
+    {{#each filteredResults as |skitourItem|}}
+      <li>{{skitour-listing skitour=skitourItem}}</li>
+    {{/each}}
+  </ul>
+{{/list-filter}}
+{{outlet}}
